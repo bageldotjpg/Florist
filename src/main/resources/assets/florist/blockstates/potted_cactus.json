@@ -1,0 +1,10 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "block/potted_cactus"
+    },
+    "variants": {
+        "hanging=true": { "model": "florist:block/potted_cactus_hanging" },
+        "hanging=false": [{}]
+    }
+}

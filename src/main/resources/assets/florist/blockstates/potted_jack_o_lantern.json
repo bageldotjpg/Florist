@@ -1,0 +1,21 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "plant": "florist:block/planted_pumpkin",
+      "face": "florist:block/planted_jack_o_lantern",
+      "side": "florist:block/planted_pumpkin"
+    },
+    "model": "florist:block/flower_pot_cube_face"
+  },
+  "variants": {
+    "hanging=true,facing=north": { "model": "florist:block/flower_pot_hanging_cube_face" },
+    "hanging=true,facing=east": { "model": "florist:block/flower_pot_hanging_cube_face", "y": 90 },
+    "hanging=true,facing=south": { "model": "florist:block/flower_pot_hanging_cube_face", "y": 180 },
+    "hanging=true,facing=west": { "model": "florist:block/flower_pot_hanging_cube_face", "y": 270 },
+    "hanging=false,facing=north": [{}],
+    "hanging=false,facing=east": [{ "y": 90 }],
+    "hanging=false,facing=south": [{ "y": 180 }],
+    "hanging=false,facing=west": [{ "y": 270 }]
+  }
+}

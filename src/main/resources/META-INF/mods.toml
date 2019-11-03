@@ -1,0 +1,12 @@
+modLoader="javafml"
+loaderVersion="[28,]"
+logoFile="logo.png"
+authors="Pugz"
+
+[[mods]]
+    modId="florist"
+    version="1.0.0"
+    displayName="Florist"
+    description='''
+    Put more items in Flower Pots!
+    '''

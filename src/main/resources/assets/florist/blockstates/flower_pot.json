@@ -1,0 +1,10 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "block/flower_pot"
+  },
+  "variants": {
+    "hanging=true": { "model": "florist:block/flower_pot_hanging" },
+    "hanging=false": [{}]
+  }
+}
