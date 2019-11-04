@@ -14,7 +14,6 @@ public class ClientProxy extends ServerProxy {
     }
 
     public void registerBlockColors() {
-        System.out.println("Registered Block Colors");
         BlockColors colors = Minecraft.getInstance().getBlockColors();
         colors.register((x, world, pos, u)
                 -> world != null && pos != null ? BiomeColors.getGrassColor(world, pos)
