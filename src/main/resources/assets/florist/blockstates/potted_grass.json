@@ -4,10 +4,10 @@
     "textures": {
       "plant": "florist:block/planted_grass"
     },
-    "model": "block/flower_pot_cross"
+    "model": "florist:block/flower_pot_cross_tinted"
   },
   "variants": {
-    "hanging=true": { "model": "florist:block/flower_pot_hanging_cross" },
+    "hanging=true": { "model": "florist:block/flower_pot_hanging_cross_tinted" },
     "hanging=false": [{}]
   }
 }

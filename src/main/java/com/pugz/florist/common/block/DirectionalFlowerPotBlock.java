@@ -2,6 +2,7 @@ package com.pugz.florist.common.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.item.Item;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
@@ -11,7 +12,7 @@ public class DirectionalFlowerPotBlock extends FlowerPotBlock {
 
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;;
 
-    public DirectionalFlowerPotBlock(Block flowerIn, Properties properties) {
+    public DirectionalFlowerPotBlock(Item flowerIn, Properties properties) {
         super(flowerIn, properties);
         setDefaultState(getDefaultState().with(HANGING, false).with(FACING, Direction.NORTH));
     }
