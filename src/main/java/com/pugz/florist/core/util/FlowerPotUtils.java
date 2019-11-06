@@ -39,16 +39,6 @@ public class FlowerPotUtils {
         return BlockRegistry.FLOWER_POT;
     }
 
-    public static boolean isPottable(Item item) {
-        Item[] whitelist = new Item[] { Items.WHEAT, Items.CARROT, Items.POTATO, Items.BEETROOT, Items.SUGAR_CANE, Items.NETHER_WART, Items.CHORUS_FRUIT, Items.PUMPKIN, Items.MELON, Items.ROSE_BUSH, Items.SUNFLOWER, Items.LILAC, Items.PEONY, Items.GRASS, Items.TALL_GRASS, Items.LARGE_FERN, Items.CARVED_PUMPKIN, Items.JACK_O_LANTERN, Items.BAMBOO, Items.OAK_SAPLING, Items.SPRUCE_SAPLING, Items.BIRCH_SAPLING, Items.JUNGLE_SAPLING, Items.ACACIA_SAPLING, Items.DARK_OAK_SAPLING, Items.FERN, Items.DANDELION, Items.POPPY, Items.BLUE_ORCHID, Items.ALLIUM, Items.AZURE_BLUET, Items.RED_TULIP, Items.ORANGE_TULIP, Items.WHITE_TULIP, Items.PINK_TULIP, Items.OXEYE_DAISY, Items.CORNFLOWER, Items.LILY_OF_THE_VALLEY, Items.WITHER_ROSE, Items.RED_MUSHROOM, Items.BROWN_MUSHROOM, Items.DEAD_BUSH, Items.CACTUS };
-        for (Item i : whitelist) {
-            if (item == i) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     public static void registerFlowerPotData() {
         FlowerPotUtils.addFlowerPotData("POTTED_BAMBOO", POTTED_BAMBOO);
         FlowerPotUtils.addFlowerPotData("POTTED_OAK_SAPLING", POTTED_OAK_SAPLING);
@@ -79,6 +69,7 @@ public class FlowerPotUtils {
         FlowerPotUtils.addFlowerPotData("POTTED_CARROT", POTTED_CARROT);
         FlowerPotUtils.addFlowerPotData("POTTED_POTATO", POTTED_POTATO);
         FlowerPotUtils.addFlowerPotData("POTTED_SUGAR_CANE", POTTED_SUGAR_CANE);
+        FlowerPotUtils.addFlowerPotData("POTTED_SWEET_BERRIES", POTTED_SWEET_BERRIES);
         FlowerPotUtils.addFlowerPotData("POTTED_BEETROOT", POTTED_BEETROOT);
         FlowerPotUtils.addFlowerPotData("POTTED_PUMPKIN", POTTED_PUMPKIN);
         FlowerPotUtils.addFlowerPotData("POTTED_MELON", POTTED_MELON);

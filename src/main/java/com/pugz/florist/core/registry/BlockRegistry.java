@@ -2,6 +2,7 @@ package com.pugz.florist.core.registry;
 
 import com.pugz.florist.common.block.DirectionalFlowerPotBlock;
 import com.pugz.florist.common.block.FlowerPotBlock;
+import com.pugz.florist.common.block.PottedSweetBerriesBlock;
 import com.pugz.florist.core.util.BlockProperties;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -49,6 +50,7 @@ public class BlockRegistry {
     public static Block POTTED_CARROT = new FlowerPotBlock(Items.CARROT, BlockProperties.FLOWER_POT).setRegistryName("potted_carrot");
     public static Block POTTED_POTATO = new FlowerPotBlock(Items.POTATO, BlockProperties.FLOWER_POT).setRegistryName("potted_potato");
     public static Block POTTED_BEETROOT = new FlowerPotBlock(Items.BEETROOT, BlockProperties.FLOWER_POT).setRegistryName("potted_beetroot");
+    public static Block POTTED_SWEET_BERRIES = new PottedSweetBerriesBlock().setRegistryName("potted_sweet_berries");
     public static Block POTTED_SUGAR_CANE = new FlowerPotBlock(Items.SUGAR_CANE, BlockProperties.FLOWER_POT).setRegistryName("potted_sugar_cane");
     public static Block POTTED_NETHER_WART = new FlowerPotBlock(Items.NETHER_WART, BlockProperties.FLOWER_POT).setRegistryName("potted_nether_wart");
     public static Block POTTED_CHORUS_FRUIT = new FlowerPotBlock(Items.CHORUS_FRUIT, BlockProperties.FLOWER_POT).setRegistryName("potted_chorus_fruit");
@@ -75,6 +77,7 @@ public class BlockRegistry {
                 POTTED_POTATO,
                 POTTED_BEETROOT,
                 POTTED_SUGAR_CANE,
+                POTTED_SWEET_BERRIES,
                 POTTED_NETHER_WART,
                 POTTED_CHORUS_FRUIT,
                 POTTED_PUMPKIN,
