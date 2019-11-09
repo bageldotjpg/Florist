@@ -2,7 +2,8 @@
   "forge_marker": 1,
   "defaults": {
     "textures": {
-      "plant": "florist:block/planted_nether_wart"
+      "plant": "florist:block/planted_nether_wart",
+      "dirt": "block/soul_sand"
     },
     "model": "block/flower_pot_cross"
   },

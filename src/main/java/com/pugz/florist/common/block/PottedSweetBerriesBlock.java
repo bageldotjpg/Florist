@@ -18,7 +18,7 @@ import net.minecraft.world.World;
 
 public class PottedSweetBerriesBlock extends FlowerPotBlock {
 
-    public static final VoxelShape FLOWER = Block.makeCuboidShape(9.0D, 6.0D, 9.0D, 9.0D, 15.0D, 9.0D);
+    public static final VoxelShape FLOWER = Block.makeCuboidShape(9.0D, 6.0D, 9.0D, 9.0D, 16.0D, 9.0D);
     public static final VoxelShape POT = Block.makeCuboidShape(5.0D, 0.0D, 5.0D, 11.0D, 6.0D, 11.0D);
     private static final VoxelShape FLOWER_POT = VoxelShapes.or(FLOWER, POT);
 
