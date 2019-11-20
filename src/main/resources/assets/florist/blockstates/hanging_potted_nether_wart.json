@@ -1,0 +1,13 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "plant": "florist:block/planted_nether_wart",
+      "dirt": "block/soul_sand"
+    },
+    "model": "florist:block/flower_pot_hanging_cross"
+  },
+  "variants": {
+    "": [{}]
+  }
+}

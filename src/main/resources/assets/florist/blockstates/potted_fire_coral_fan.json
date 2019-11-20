@@ -1,0 +1,13 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "textures": {
+            "plant": "block/fire_coral_fan"
+        },
+        "model": "florist:block/flower_pot_fan"
+    },
+    "variants": {
+        "hanging=true": { "model": "florist:block/flower_pot_hanging_fan" },
+        "hanging=false": [{}]
+    }
+}

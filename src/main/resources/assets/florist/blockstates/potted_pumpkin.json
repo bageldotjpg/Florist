@@ -8,7 +8,6 @@
     "model": "florist:block/flower_pot_cube_all"
   },
   "variants": {
-    "hanging=true": { "model": "florist:block/flower_pot_hanging_cube_all" },
-    "hanging=false": [{}]
+    "": [{}]
   }
 }

@@ -1,0 +1,17 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "plant": "florist:block/planted_pumpkin",
+      "face": "florist:block/planted_jack_o_lantern",
+      "side": "florist:block/planted_pumpkin"
+    },
+    "model": "florist:block/flower_pot_hanging_cube_face"
+  },
+  "variants": {
+    "facing=north": [{}],
+    "facing=east": [{ "y": 90 }],
+    "facing=south": [{ "y": 180 }],
+    "facing=west": [{ "y": 270 }]
+  }
+}

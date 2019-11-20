@@ -1,0 +1,12 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "textures": {
+            "plant": "block/lily_of_the_valley"
+        },
+        "model": "florist:block/flower_pot_hanging_cross"
+    },
+    "variants": {
+        "": [{}]
+    }
+}

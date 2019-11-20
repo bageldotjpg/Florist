@@ -1,0 +1,12 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "plant": "block/sweet_berry_bush_stage3"
+    },
+    "model": "florist:block/flower_pot_hanging_cross"
+  },
+  "variants": {
+    "": [{}]
+  }
+}

@@ -7,7 +7,6 @@
     "model": "florist:block/flower_pot_cross_tinted"
   },
   "variants": {
-    "hanging=true": { "model": "florist:block/flower_pot_hanging_cross_tinted" },
-    "hanging=false": [{}]
+    "": [{}]
   }
 }

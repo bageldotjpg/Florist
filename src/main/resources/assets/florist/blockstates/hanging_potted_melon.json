@@ -1,0 +1,13 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "plant": "florist:block/planted_melon",
+      "all": "florist:block/planted_melon"
+    },
+    "model": "florist:block/flower_pot_hanging_cube_all"
+  },
+  "variants": {
+    "": [{}]
+  }
+}
