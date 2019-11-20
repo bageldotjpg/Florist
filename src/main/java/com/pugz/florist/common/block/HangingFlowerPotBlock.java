@@ -46,10 +46,13 @@ public class HangingFlowerPotBlock extends FlowerPotBlock {
                     world.setBlockState(pos, BlockRegistry.HANGING_POTTED_JACK_O_LANTERN.getDefaultState().with(Directional.FACING, direction), 3);
                     break;
                 default:
-                    System.out.println(held.getItem().getRegistryName());
-                    System.out.println(name);
-                    for (Item item : FlowerPotUtils.MODDED_FLOWER_POT_ITEMS) {
-                        if (held.getItem() == item) {
+                    for (String string : FlowerPotUtils.VANILLA_FLOWER_POT_ITEMS) {
+                        if (name.equals(string)) {
+                            world.setBlockState(pos, FlowerPotUtils.getBlockByFieldVanilla(name).getDefaultState(), 3);
+                        }
+                    }
+                    for (String string : FlowerPotUtils.MODDED_FLOWER_POT_ITEMS) {
+                        if (name.equals(string)) {
                             world.setBlockState(pos, FlowerPotUtils.getBlockByField(name).getDefaultState(), 3);
                         }
                     }

@@ -97,10 +97,13 @@ public class FlowerPotBlock extends Block {
                     world.setBlockState(pos, BlockRegistry.POTTED_JACK_O_LANTERN.getDefaultState().with(Directional.FACING, direction), 3);
                     break;
                 default:
-                    System.out.println(held.getItem().getRegistryName());
-                    System.out.println(name);
-                    for (Item item : FlowerPotUtils.MODDED_FLOWER_POT_ITEMS) {
-                        if (held.getItem() == item) {
+                    for (String string : FlowerPotUtils.VANILLA_FLOWER_POT_ITEMS) {
+                        if (name.equals(string)) {
+                            world.setBlockState(pos, FlowerPotUtils.getBlockByFieldVanilla(name).getDefaultState(), 3);
+                        }
+                    }
+                    for (String string : FlowerPotUtils.MODDED_FLOWER_POT_ITEMS) {
+                        if (name.equals(string)) {
                             world.setBlockState(pos, FlowerPotUtils.getBlockByField(name).getDefaultState(), 3);
                         }
                     }
@@ -113,7 +116,7 @@ public class FlowerPotBlock extends Block {
             return true;
         }
         else {
-            world.setBlockState(pos, Blocks.FLOWER_POT.getDefaultState(), 3);
+            world.setBlockState(pos, BlockRegistry.FLOWER_POT.getDefaultState(), 3);
             if (held.isEmpty()) {
                 player.setHeldItem(hand, new ItemStack(flower));
             }
@@ -127,7 +130,7 @@ public class FlowerPotBlock extends Block {
     }
 
     public static class Directional extends FlowerPotBlock {
-        public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;;
+        public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
         public Directional(Item flowerIn, Properties properties) {
             super(flowerIn, properties);

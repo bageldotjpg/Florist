@@ -90,10 +90,8 @@ public class CompatibilityRegistry {
     public static Item CAVE_ROOT = ForgeRegistries.ITEMS.getValue(new ResourceLocation("quark:root_item"));
     public static Item GLOWSHROOM = ForgeRegistries.ITEMS.getValue(new ResourceLocation("quark:glowshroom"));
 
-    public static Item ORANGE = ForgeRegistries.ITEMS.getValue(new ResourceLocation("rys:orange"));
-    public static Item ROTTEN_ORANGE = ForgeRegistries.ITEMS.getValue(new ResourceLocation("rys:rotten_orange"));
-    public static Item APRICOT = ForgeRegistries.ITEMS.getValue(new ResourceLocation("rys:apricot"));
-    public static Item ROTTEN_APRICOT = ForgeRegistries.ITEMS.getValue(new ResourceLocation("rys:rotten_apricot"));
+    public static Item ORANGE_FRUIT_TREE = ForgeRegistries.ITEMS.getValue(new ResourceLocation("rys:orange_fruit_tree"));
+    public static Item APRICOT_FRUIT_TREE = ForgeRegistries.ITEMS.getValue(new ResourceLocation("rys:apricot_fruit_tree"));
     public static Item DAYROOT = ForgeRegistries.ITEMS.getValue(new ResourceLocation("rys:dayroot"));
 
     public static Item BUTTERCUP = ForgeRegistries.ITEMS.getValue(new ResourceLocation("earthmobsmod:buttercup"));
@@ -141,15 +139,11 @@ public class CompatibilityRegistry {
     public static Block HANGING_POTTED_CAVE_ROOT = new HangingFlowerPotBlock(CAVE_ROOT, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_cave_root");
     public static Block HANGING_POTTED_GLOWSHROOM = new HangingFlowerPotBlock(GLOWSHROOM, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_glowshroom");
 
-    public static Block POTTED_ORANGE = new FlowerPotBlock(ORANGE, BlockProperties.FLOWER_POT).setRegistryName("potted_orange");
-    public static Block POTTED_ROTTEN_ORANGE = new FlowerPotBlock(ROTTEN_ORANGE, BlockProperties.FLOWER_POT).setRegistryName("potted_rotten_orange");
-    public static Block POTTED_APRICOT = new FlowerPotBlock(APRICOT, BlockProperties.FLOWER_POT).setRegistryName("potted_apricot");
-    public static Block POTTED_ROTTEN_APRICOT = new FlowerPotBlock(ROTTEN_APRICOT, BlockProperties.FLOWER_POT).setRegistryName("potted_rotten_apricot");
+    public static Block POTTED_ORANGE = new FlowerPotBlock(ORANGE_FRUIT_TREE, BlockProperties.FLOWER_POT).setRegistryName("potted_orange");
+    public static Block POTTED_APRICOT = new FlowerPotBlock(APRICOT_FRUIT_TREE, BlockProperties.FLOWER_POT).setRegistryName("potted_apricot");
     public static Block POTTED_DAYROOT = new FlowerPotBlock(DAYROOT, BlockProperties.FLOWER_POT).setRegistryName("potted_dayroot");
-    public static Block HANGING_POTTED_ORANGE = new HangingFlowerPotBlock(ORANGE, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_orange");
-    public static Block HANGING_POTTED_ROTTEN_ORANGE = new HangingFlowerPotBlock(ROTTEN_ORANGE, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_rotten_orange");
-    public static Block HANGING_POTTED_APRICOT = new HangingFlowerPotBlock(APRICOT, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_apricot");
-    public static Block HANGING_POTTED_ROTTEN_APRICOT = new HangingFlowerPotBlock(ROTTEN_APRICOT, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_rotten_apricot");
+    public static Block HANGING_POTTED_ORANGE = new HangingFlowerPotBlock(ORANGE_FRUIT_TREE, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_orange");
+    public static Block HANGING_POTTED_APRICOT = new HangingFlowerPotBlock(APRICOT_FRUIT_TREE, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_apricot");
     public static Block HANGING_POTTED_DAYROOT = new HangingFlowerPotBlock(DAYROOT, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_dayroot");
 
     public static Block HANGING_POTTED_BUTTERCUP = new HangingFlowerPotBlock(BUTTERCUP, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_buttercup");
@@ -194,8 +188,8 @@ public class CompatibilityRegistry {
         }
         if (ModList.get().isLoaded("rys")) {
             event.getRegistry().registerAll(
-                    POTTED_ORANGE, POTTED_ROTTEN_ORANGE, POTTED_APRICOT, POTTED_ROTTEN_APRICOT, POTTED_DAYROOT,
-                    HANGING_POTTED_ORANGE, HANGING_POTTED_ROTTEN_ORANGE,	HANGING_POTTED_APRICOT, HANGING_POTTED_ROTTEN_APRICOT,
+                    POTTED_ORANGE, POTTED_APRICOT, POTTED_DAYROOT,
+                    HANGING_POTTED_ORANGE, HANGING_POTTED_APRICOT,
                     HANGING_POTTED_DAYROOT
             );
         }
