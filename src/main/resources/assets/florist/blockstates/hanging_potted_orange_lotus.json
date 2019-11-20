@@ -1,0 +1,12 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "textures": {
+            "plant": "tropics:block/orange_lotus"
+        },
+        "model": "florist:block/flower_pot_hanging_fan"
+    },
+    "variants": {
+        "": [{}]
+    }
+}

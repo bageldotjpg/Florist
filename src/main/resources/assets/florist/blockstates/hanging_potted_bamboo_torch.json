@@ -1,0 +1,9 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "florist:block/potted_bamboo_torch_hanging"
+    },
+    "variants": {
+        "": [{}]
+    }
+}

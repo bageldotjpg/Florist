@@ -1,0 +1,12 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "plant": "endergetic:block/corrock_end_crown"
+    },
+    "model": "block/flower_pot_cross"
+  },
+  "variants": {
+    "": [{}]
+  }
+}

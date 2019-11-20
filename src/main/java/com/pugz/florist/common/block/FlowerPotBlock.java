@@ -79,36 +79,10 @@ public class FlowerPotBlock extends Block {
         String name = "POTTED_" + held.getItem().getRegistryName().toString().replace("minecraft:", "").toUpperCase();
         Direction hitFace = ray.getFace();
         Direction axisDirection = direction.getAxis() == Direction.Axis.Y ? player.getHorizontalFacing().getOpposite() : hitFace;
-        if (held.getItem() == Items.SHEARS && state.getBlock() == BlockRegistry.POTTED_PUMPKIN) {
-            world.setBlockState(pos, BlockRegistry.POTTED_CARVED_PUMPKIN.getDefaultState().with(Directional.FACING, direction), 3);
-            held.getItem().setDamage(held, held.getDamage() - 1);
-            ItemEntity seeds = new ItemEntity(world, (double)pos.getX() + 0.5D + (double)axisDirection.getXOffset() * 0.65D, (double)pos.getY() + 0.1D, (double)pos.getZ() + 0.5D + (double)axisDirection.getZOffset() * 0.65D, new ItemStack(Items.PUMPKIN_SEEDS, 4));
-            seeds.setMotion(0.05D * (double)axisDirection.getXOffset() + world.rand.nextDouble() * 0.02D, 0.05D, 0.05D * (double)axisDirection.getZOffset() + world.rand.nextDouble() * 0.02D);
-            world.playSound(player, pos, SoundEvents.BLOCK_PUMPKIN_CARVE, SoundCategory.BLOCKS, 1.0F, 1.0F);
-            world.addEntity(seeds);
-            return true;
-        }
-        if (flower == Items.AIR) {
-            switch (held.getItem().getRegistryName().toString()) {
-                case "minecraft:carved_pumpkin":
-                    world.setBlockState(pos, BlockRegistry.POTTED_CARVED_PUMPKIN.getDefaultState().with(Directional.FACING, direction), 3);
-                    break;
-                case "minecraft:jack_o_lantern":
-                    world.setBlockState(pos, BlockRegistry.POTTED_JACK_O_LANTERN.getDefaultState().with(Directional.FACING, direction), 3);
-                    break;
-                default:
-                    for (String string : FlowerPotUtils.VANILLA_FLOWER_POT_ITEMS) {
-                        if (name.equals(string)) {
-                            world.setBlockState(pos, FlowerPotUtils.getBlockByFieldVanilla(name).getDefaultState(), 3);
-                        }
-                    }
-                    for (String string : FlowerPotUtils.MODDED_FLOWER_POT_ITEMS) {
-                        if (name.equals(string)) {
-                            world.setBlockState(pos, FlowerPotUtils.getBlockByField(name).getDefaultState(), 3);
-                        }
-                    }
-                    break;
-            }
+        tryForPumpkin(world, pos, state, player, held, axisDirection);
+        if (!FlowerPotUtils.isPottable(held.getItem())) return false;
+        else if (flower == Items.AIR) {
+            fillPot(world, pos, player, held, name);
             player.addStat(Stats.POT_FLOWER);
             if (!player.abilities.isCreativeMode) {
                 held.shrink(1);
@@ -126,6 +100,33 @@ public class FlowerPotBlock extends Block {
                 }
             }
             return true;
+        }
+    }
+
+    public static void tryForPumpkin(World world, BlockPos pos, BlockState state, PlayerEntity player, ItemStack held, Direction axisDirection) {
+        Direction direction = player.getHorizontalFacing().getOpposite();
+        if (held.getItem() == Items.SHEARS && state.getBlock() == BlockRegistry.POTTED_PUMPKIN) {
+            world.setBlockState(pos, BlockRegistry.POTTED_CARVED_PUMPKIN.getDefaultState().with(Directional.FACING, direction), 3);
+            held.getItem().setDamage(held, held.getDamage() - 1);
+            ItemEntity seeds = new ItemEntity(world, (double)pos.getX() + 0.5D + (double)axisDirection.getXOffset() * 0.65D, (double)pos.getY() + 0.1D, (double)pos.getZ() + 0.5D + (double)axisDirection.getZOffset() * 0.65D, new ItemStack(Items.PUMPKIN_SEEDS, 4));
+            seeds.setMotion(0.05D * (double)axisDirection.getXOffset() + world.rand.nextDouble() * 0.02D, 0.05D, 0.05D * (double)axisDirection.getZOffset() + world.rand.nextDouble() * 0.02D);
+            world.playSound(player, pos, SoundEvents.BLOCK_PUMPKIN_CARVE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.addEntity(seeds);
+        }
+    }
+
+    public static void fillPot(World world, BlockPos pos, PlayerEntity player, ItemStack held, String name) {
+        Direction direction = player.getHorizontalFacing().getOpposite();
+        switch (held.getItem().getRegistryName().toString()) {
+            case "minecraft:carved_pumpkin":
+                world.setBlockState(pos, BlockRegistry.POTTED_CARVED_PUMPKIN.getDefaultState().with(Directional.FACING, direction), 3);
+                break;
+            case "minecraft:jack_o_lantern":
+                world.setBlockState(pos, BlockRegistry.POTTED_JACK_O_LANTERN.getDefaultState().with(Directional.FACING, direction), 3);
+                break;
+            default:
+                world.setBlockState(pos, FlowerPotUtils.getBlockByField(name).getDefaultState(), 3);
+                break;
         }
     }
 
