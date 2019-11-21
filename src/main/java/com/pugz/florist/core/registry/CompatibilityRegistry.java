@@ -91,6 +91,7 @@ public class CompatibilityRegistry {
 
     public static Item ORANGE_FRUIT_TREE = ForgeRegistries.ITEMS.getValue(new ResourceLocation("rys:orange_fruit_tree"));
     public static Item APRICOT_FRUIT_TREE = ForgeRegistries.ITEMS.getValue(new ResourceLocation("rys:apricot_fruit_tree"));
+    public static Item APPLE_FRUIT_TREE = ForgeRegistries.ITEMS.getValue(new ResourceLocation("rys:apple_fruit_tree"));
     public static Item DAYROOT = ForgeRegistries.ITEMS.getValue(new ResourceLocation("rys:dayroot"));
 
     public static Item BUTTERCUP = ForgeRegistries.ITEMS.getValue(new ResourceLocation("earthmobsmod:buttercup"));
@@ -130,14 +131,14 @@ public class CompatibilityRegistry {
     public static Block HANGING_POTTED_PURPLE_LOTUS = new HangingFlowerPotBlock(PURPLE_LOTUS, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_purple_lotus");
     public static Block HANGING_POTTED_PINK_LOTUS = new HangingFlowerPotBlock(PINK_LOTUS, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_pink_lotus");
 
-    public static Block POTTED_BLUE_PICKERELWEED = new FlowerPotBlock(BLUE_PICKERELWEED, BlockProperties.FLOWER_POT).setRegistryName("upgrade_aquatic:potted_blue_pickerelweed");
-    public static Block POTTED_PURPLE_PICKERELWEED = new FlowerPotBlock(PURPLE_PICKERELWEED, BlockProperties.FLOWER_POT).setRegistryName("upgrade_aquatic:potted_purple_pickerelweed");
-    public static Block POTTED_WHITE_SEAROCKET = new FlowerPotBlock(WHITE_SEAROCKET, BlockProperties.FLOWER_POT).setRegistryName("upgrade_aquatic:potted_white_searocket");
-    public static Block POTTED_PINK_SEAROCKET = new FlowerPotBlock(PINK_SEAROCKET, BlockProperties.FLOWER_POT).setRegistryName("upgrade_aquatic:potted_pink_searocket");
-    public static Block HANGING_POTTED_BLUE_PICKERELWEED = new HangingFlowerPotBlock(BLUE_PICKERELWEED, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_blue_pickerelweed");
-    public static Block HANGING_POTTED_PURPLE_PICKERELWEED = new HangingFlowerPotBlock(PURPLE_PICKERELWEED, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_purple_pickerelweed");
-    public static Block HANGING_POTTED_WHITE_SEAROCKET = new HangingFlowerPotBlock(WHITE_SEAROCKET, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_white_searocket");
-    public static Block HANGING_POTTED_PINK_SEAROCKET = new HangingFlowerPotBlock(PINK_SEAROCKET, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_pink_searocket");
+    public static Block POTTED_PICKEREL_WEED_BLUE = new FlowerPotBlock(BLUE_PICKERELWEED, BlockProperties.FLOWER_POT).setRegistryName("upgrade_aquatic:potted_pickerel_weed_blue");
+    public static Block POTTED_PICKEREL_WEED_PURPLE = new FlowerPotBlock(PURPLE_PICKERELWEED, BlockProperties.FLOWER_POT).setRegistryName("upgrade_aquatic:potted_pickerel_weed_purple");
+    public static Block POTTED_SEAROCKET_WHITE = new FlowerPotBlock(WHITE_SEAROCKET, BlockProperties.FLOWER_POT).setRegistryName("upgrade_aquatic:potted_searocket_white");
+    public static Block POTTED_SEAROCKET_PINK = new FlowerPotBlock(PINK_SEAROCKET, BlockProperties.FLOWER_POT).setRegistryName("upgrade_aquatic:potted_searocket_pink");
+    public static Block HANGING_POTTED_PICKEREL_WEED_BLUE = new HangingFlowerPotBlock(BLUE_PICKERELWEED, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_pickerel_weed_blue");
+    public static Block HANGING_POTTED_PICKEREL_WEED_PURPLE = new HangingFlowerPotBlock(PURPLE_PICKERELWEED, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_pickerel_weed_purple");
+    public static Block HANGING_POTTED_SEAROCKET_WHITE = new HangingFlowerPotBlock(WHITE_SEAROCKET, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_searocket_white");
+    public static Block HANGING_POTTED_SEAROCKET_PINK = new HangingFlowerPotBlock(PINK_SEAROCKET, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_searocket_pink");
     //public static Block POTTED_FLOWERING_RUSH = new FlowerPotBlock(FLOWERING_RUSH, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_bamboo_torch");
     //public static Block HANGING_POTTED_FLOWERING_RUSH = new HangingFlowerPotBlock(FLOWERING_RUSH, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_bamboo_torch");
     //public static Block POTTED_ACAN_CORAL = new FlowerPotBlock.Coral(ACAN_CORAL, BlockProperties.FLOWER_POT).setRegistryName("potted_acan_coral");
@@ -161,15 +162,17 @@ public class CompatibilityRegistry {
     public static Block HANGING_POTTED_TALL_POISE_BUSH = new HangingFlowerPotBlock(TALL_POISE_GRASS, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_tall_poise_bush");
 
     public static Block POTTED_CAVE_ROOT = new FlowerPotBlock(CAVE_ROOT, BlockProperties.FLOWER_POT).setRegistryName("quark:potted_cave_root");
-    public static Block POTTED_GLOWSHROOM = new FlowerPotBlock(GLOWSHROOM, BlockProperties.FLOWER_POT).setRegistryName("quark:potted_glowshroom");
+    public static Block POTTED_GLOWSHROOM = new FlowerPotBlock(GLOWSHROOM, BlockProperties.POTTED_TORCH).setRegistryName("quark:potted_glowshroom");
     public static Block HANGING_POTTED_CAVE_ROOT = new HangingFlowerPotBlock(CAVE_ROOT, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_cave_root");
-    public static Block HANGING_POTTED_GLOWSHROOM = new HangingFlowerPotBlock(GLOWSHROOM, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_glowshroom");
+    public static Block HANGING_POTTED_GLOWSHROOM = new HangingFlowerPotBlock(GLOWSHROOM, BlockProperties.POTTED_TORCH).setRegistryName("hanging_potted_glowshroom");
 
     public static Block POTTED_ORANGE = new FlowerPotBlock(ORANGE_FRUIT_TREE, BlockProperties.FLOWER_POT).setRegistryName("potted_orange");
     public static Block POTTED_APRICOT = new FlowerPotBlock(APRICOT_FRUIT_TREE, BlockProperties.FLOWER_POT).setRegistryName("potted_apricot");
+    public static Block POTTED_APPLE = new FlowerPotBlock(APPLE_FRUIT_TREE, BlockProperties.FLOWER_POT).setRegistryName("potted_apple");
     public static Block POTTED_DAYROOT = new FlowerPotBlock(DAYROOT, BlockProperties.FLOWER_POT).setRegistryName("potted_dayroot");
     public static Block HANGING_POTTED_ORANGE = new HangingFlowerPotBlock(ORANGE_FRUIT_TREE, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_orange");
     public static Block HANGING_POTTED_APRICOT = new HangingFlowerPotBlock(APRICOT_FRUIT_TREE, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_apricot");
+    public static Block HANGING_POTTED_APPLE = new HangingFlowerPotBlock(APPLE_FRUIT_TREE, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_apple");
     public static Block HANGING_POTTED_DAYROOT = new HangingFlowerPotBlock(DAYROOT, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_dayroot");
 
     public static Block POTTED_BUTTERCUP = new FlowerPotBlock(BUTTERCUP, BlockProperties.FLOWER_POT).setRegistryName("earthmobsmod:hanging_potted_buttercup");
@@ -197,11 +200,12 @@ public class CompatibilityRegistry {
             );
         }
         if (ModList.get().isLoaded("upgrade_aquatic")) {
+            System.out.println(POTTED_PICKEREL_WEED_BLUE.getRegistryName());
             event.getRegistry().registerAll(
-                    POTTED_BLUE_PICKERELWEED, POTTED_PURPLE_PICKERELWEED,
-                    POTTED_WHITE_SEAROCKET, POTTED_PINK_SEAROCKET,
-                    HANGING_POTTED_BLUE_PICKERELWEED, HANGING_POTTED_PURPLE_PICKERELWEED,
-                    HANGING_POTTED_WHITE_SEAROCKET, HANGING_POTTED_PINK_SEAROCKET
+                    POTTED_PICKEREL_WEED_BLUE, POTTED_PICKEREL_WEED_PURPLE,
+                    POTTED_SEAROCKET_WHITE, POTTED_SEAROCKET_PINK,
+                    HANGING_POTTED_PICKEREL_WEED_BLUE, HANGING_POTTED_PICKEREL_WEED_PURPLE,
+                    HANGING_POTTED_SEAROCKET_WHITE, HANGING_POTTED_SEAROCKET_PINK
             );
         }
         if (ModList.get().isLoaded("endergetic")) {
@@ -219,9 +223,8 @@ public class CompatibilityRegistry {
         }
         if (ModList.get().isLoaded("rys")) {
             event.getRegistry().registerAll(
-                    POTTED_ORANGE, POTTED_APRICOT, POTTED_DAYROOT,
-                    HANGING_POTTED_ORANGE, HANGING_POTTED_APRICOT,
-                    HANGING_POTTED_DAYROOT
+                    POTTED_ORANGE, POTTED_APRICOT, POTTED_APPLE, POTTED_DAYROOT,
+                    HANGING_POTTED_ORANGE, HANGING_POTTED_APRICOT, HANGING_POTTED_APPLE, HANGING_POTTED_DAYROOT
             );
         }
         if (ModList.get().isLoaded("earthmobsmod")) {

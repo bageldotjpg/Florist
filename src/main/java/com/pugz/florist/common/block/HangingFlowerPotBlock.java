@@ -24,7 +24,7 @@ public class HangingFlowerPotBlock extends FlowerPotBlock {
     public boolean onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult ray) {
         ItemStack held = player.getHeldItem(hand);
         Direction direction = player.getHorizontalFacing().getOpposite();
-        String name = "POTTED_" + held.getItem().getRegistryName().toString().replace("minecraft:", "").toUpperCase();
+        String name = "HANGING_" + FlowerPotUtils.getFieldName(held.getItem().getRegistryName().toString());
         Direction hitFace = ray.getFace();
         Direction axisDirection = direction.getAxis() == Direction.Axis.Y ? player.getHorizontalFacing().getOpposite() : hitFace;
         tryForPumpkin(world, pos, state, player, held, axisDirection);

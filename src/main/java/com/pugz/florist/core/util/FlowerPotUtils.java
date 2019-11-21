@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static com.pugz.florist.core.registry.BlockRegistry.*;
+import static com.pugz.florist.core.registry.CompatibilityRegistry.*;
 
 public class FlowerPotUtils {
     public static Map<Field, Block> FLOWER_POT_DATA = new HashMap<Field, Block>();
@@ -86,6 +87,20 @@ public class FlowerPotUtils {
             if (item.getRegistryName().toString().equals(name)) return true;
         }
         return false;
+    }
+
+    public static String getFieldName(String string) {
+        return "POTTED_" + string
+                .replace("minecraft:", "")
+                .replace("bambooblocks:", "")
+                .replace("bloomful:", "")
+                .replace("tropics:", "")
+                .replace("upgrade_aquatic:", "")
+                .replace("endergetic:", "")
+                .replace("quark:", "")
+                .replace("rys:", "")
+                .replace("earthmobsmod:", "")
+                .toUpperCase();
     }
 
     public static void registerFlowerPotData() {
@@ -181,5 +196,69 @@ public class FlowerPotUtils {
         //FlowerPotUtils.addFlowerPotData("POTTED_DEAD_FIRE_CORAL", POTTED_DEAD_FIRE_CORAL);
         //FlowerPotUtils.addFlowerPotData("POTTED_FIRE_CORAL_FAN", POTTED_FIRE_CORAL_FAN);
         //FlowerPotUtils.addFlowerPotData("POTTED_DEAD_FIRE_CORAL_FAN", POTTED_DEAD_FIRE_CORAL_FAN);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_BAMBOO_TORCH", HANGING_POTTED_BAMBOO_TORCH);
+        FlowerPotUtils.addFlowerPotData("POTTED_BAMBOO_TORCH", POTTED_BAMBOO_TORCH);
+        FlowerPotUtils.addFlowerPotData("POTTED_WHITE_DELPHINIUM", POTTED_WHITE_DELPHINIUM);
+        FlowerPotUtils.addFlowerPotData("POTTED_PINK_DELPHINIUM", POTTED_PINK_DELPHINIUM);
+        FlowerPotUtils.addFlowerPotData("POTTED_PURPLE_DELPHINIUM", POTTED_PURPLE_DELPHINIUM);
+        FlowerPotUtils.addFlowerPotData("POTTED_BLUE_DELPHINIUM", POTTED_BLUE_DELPHINIUM);
+        FlowerPotUtils.addFlowerPotData("POTTED_WHITE_WISTERIA_SAPLING", POTTED_WHITE_WISTERIA_SAPLING);
+        FlowerPotUtils.addFlowerPotData("POTTED_PINK_WISTERIA_SAPLING", POTTED_PINK_WISTERIA_SAPLING);
+        FlowerPotUtils.addFlowerPotData("POTTED_PURPLE_WISTERIA_SAPLING", POTTED_PURPLE_WISTERIA_SAPLING);
+        FlowerPotUtils.addFlowerPotData("POTTED_BLUE_WISTERIA_SAPLING", POTTED_BLUE_WISTERIA_SAPLING);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_WHITE_DELPHINIUM", HANGING_POTTED_WHITE_DELPHINIUM);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_PINK_DELPHINIUM", HANGING_POTTED_PINK_DELPHINIUM);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_PURPLE_DELPHINIUM", HANGING_POTTED_PURPLE_DELPHINIUM);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_BLUE_DELPHINIUM", HANGING_POTTED_BLUE_DELPHINIUM);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_WHITE_WISTERIA_SAPLING", HANGING_POTTED_WHITE_WISTERIA_SAPLING);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_PINK_WISTERIA_SAPLING", HANGING_POTTED_PINK_WISTERIA_SAPLING);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_PURPLE_WISTERIA_SAPLING", HANGING_POTTED_PURPLE_WISTERIA_SAPLING);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_BLUE_WISTERIA_SAPLING", HANGING_POTTED_BLUE_WISTERIA_SAPLING);
+        FlowerPotUtils.addFlowerPotData("POTTED_RED_LOTUS", POTTED_RED_LOTUS);
+        FlowerPotUtils.addFlowerPotData("POTTED_ORANGE_LOTUS", POTTED_ORANGE_LOTUS);
+        FlowerPotUtils.addFlowerPotData("POTTED_YELLOW_LOTUS", POTTED_YELLOW_LOTUS);
+        FlowerPotUtils.addFlowerPotData("POTTED_CYAN_LOTUS", POTTED_CYAN_LOTUS);
+        FlowerPotUtils.addFlowerPotData("POTTED_BLUE_LOTUS", POTTED_BLUE_LOTUS);
+        FlowerPotUtils.addFlowerPotData("POTTED_PURPLE_LOTUS", POTTED_PURPLE_LOTUS);
+        FlowerPotUtils.addFlowerPotData("POTTED_PINK_LOTUS", POTTED_PINK_LOTUS);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_RED_LOTUS", HANGING_POTTED_RED_LOTUS);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_ORANGE_LOTUS", HANGING_POTTED_ORANGE_LOTUS);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_YELLOW_LOTUS", HANGING_POTTED_YELLOW_LOTUS);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_CYAN_LOTUS", HANGING_POTTED_CYAN_LOTUS);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_BLUE_LOTUS", HANGING_POTTED_BLUE_LOTUS);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_PURPLE_LOTUS", HANGING_POTTED_PURPLE_LOTUS);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_PINK_LOTUS", HANGING_POTTED_PINK_LOTUS);
+        FlowerPotUtils.addFlowerPotData("POTTED_PICKEREL_WEED_BLUE", POTTED_PICKEREL_WEED_BLUE);
+        FlowerPotUtils.addFlowerPotData("POTTED_PICKEREL_WEED_PURPLE", POTTED_PICKEREL_WEED_PURPLE);
+        FlowerPotUtils.addFlowerPotData("POTTED_SEAROCKET_WHITE", POTTED_SEAROCKET_WHITE);
+        FlowerPotUtils.addFlowerPotData("POTTED_SEAROCKET_PINK", POTTED_SEAROCKET_PINK);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_PICKEREL_WEED_BLUE", HANGING_POTTED_PICKEREL_WEED_BLUE);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_PICKEREL_WEED_PURPLE", HANGING_POTTED_PICKEREL_WEED_PURPLE);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_SEAROCKET_WHITE", HANGING_POTTED_SEAROCKET_WHITE);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_SEAROCKET_PINK", HANGING_POTTED_SEAROCKET_PINK);
+        FlowerPotUtils.addFlowerPotData("POTTED_CORROCK_CROWN_OVERWORLD", POTTED_CORROCK_CROWN_OVERWORLD);
+        FlowerPotUtils.addFlowerPotData("POTTED_CORROCK_CROWN_NETHER", POTTED_CORROCK_CROWN_NETHER);
+        FlowerPotUtils.addFlowerPotData("POTTED_CORROCK_CROWN_END", POTTED_CORROCK_CROWN_END);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_CORROCK_CROWN_OVERWORLD", HANGING_POTTED_CORROCK_CROWN_OVERWORLD);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_CORROCK_CROWN_NETHER", HANGING_POTTED_CORROCK_CROWN_NETHER);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_CORROCK_CROWN_END", HANGING_POTTED_CORROCK_CROWN_END);
+        FlowerPotUtils.addFlowerPotData("POTTED_POISE_BUSH", POTTED_POISE_BUSH);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_POISE_BUSH", HANGING_POTTED_POISE_BUSH);
+        FlowerPotUtils.addFlowerPotData("POTTED_TALL_POISE_BUSH", POTTED_TALL_POISE_BUSH);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_TALL_POISE_BUSH", HANGING_POTTED_TALL_POISE_BUSH);
+        FlowerPotUtils.addFlowerPotData("POTTED_CAVE_ROOT", POTTED_CAVE_ROOT);
+        FlowerPotUtils.addFlowerPotData("POTTED_GLOWSHROOM", POTTED_GLOWSHROOM);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_CAVE_ROOT", HANGING_POTTED_CAVE_ROOT);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_GLOWSHROOM", HANGING_POTTED_GLOWSHROOM);
+        FlowerPotUtils.addFlowerPotData("POTTED_ORANGE", POTTED_ORANGE);
+        FlowerPotUtils.addFlowerPotData("POTTED_APRICOT", POTTED_APRICOT);
+        FlowerPotUtils.addFlowerPotData("POTTED_APPLE", POTTED_APPLE);
+        FlowerPotUtils.addFlowerPotData("POTTED_DAYROOT", POTTED_DAYROOT);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_ORANGE", HANGING_POTTED_ORANGE);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_APRICOT", HANGING_POTTED_APRICOT);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_APPLE", HANGING_POTTED_APPLE);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_DAYROOT", HANGING_POTTED_DAYROOT);
+        FlowerPotUtils.addFlowerPotData("POTTED_BUTTERCUP", POTTED_BUTTERCUP);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_BUTTERCUP", HANGING_POTTED_BUTTERCUP);
     }
 }

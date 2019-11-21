@@ -42,7 +42,8 @@ public class FlowerPotBlock extends Block {
 
     @Override
     public ItemStack getPickBlock(BlockState state, RayTraceResult target, IBlockReader world, BlockPos pos, PlayerEntity player) {
-        return new ItemStack(flower);
+        if (flower == Items.AIR) return new ItemStack(BlockRegistry.FLOWER_POT);
+        else return new ItemStack(flower);
     }
 
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
@@ -76,7 +77,7 @@ public class FlowerPotBlock extends Block {
     public boolean onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult ray) {
         ItemStack held = player.getHeldItem(hand);
         Direction direction = player.getHorizontalFacing().getOpposite();
-        String name = "POTTED_" + held.getItem().getRegistryName().toString().replace("minecraft:", "").toUpperCase();
+        String name = FlowerPotUtils.getFieldName(held.getItem().getRegistryName().toString());
         Direction hitFace = ray.getFace();
         Direction axisDirection = direction.getAxis() == Direction.Axis.Y ? player.getHorizontalFacing().getOpposite() : hitFace;
         tryForPumpkin(world, pos, state, player, held, axisDirection);
@@ -125,6 +126,8 @@ public class FlowerPotBlock extends Block {
                 world.setBlockState(pos, BlockRegistry.POTTED_JACK_O_LANTERN.getDefaultState().with(Directional.FACING, direction), 3);
                 break;
             default:
+                System.out.println(held.getItem().getRegistryName());
+                System.out.println(name);
                 world.setBlockState(pos, FlowerPotUtils.getBlockByField(name).getDefaultState(), 3);
                 break;
         }
