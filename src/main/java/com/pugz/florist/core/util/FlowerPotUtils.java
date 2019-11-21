@@ -89,6 +89,7 @@ public class FlowerPotUtils {
         return false;
     }
 
+    //only change depending on loaded mods
     public static String getFieldName(String string) {
         return "POTTED_" + string
                 .replace("minecraft:", "")
@@ -103,6 +104,7 @@ public class FlowerPotUtils {
                 .toUpperCase();
     }
 
+    //only add if mod is loaded
     public static void registerFlowerPotData() {
         FlowerPotUtils.addFlowerPotData("POTTED_BAMBOO", POTTED_BAMBOO);
         FlowerPotUtils.addFlowerPotData("POTTED_OAK_SAPLING", POTTED_OAK_SAPLING);
@@ -236,27 +238,27 @@ public class FlowerPotUtils {
         FlowerPotUtils.addFlowerPotData("HANGING_POTTED_PICKEREL_WEED_PURPLE", HANGING_POTTED_PICKEREL_WEED_PURPLE);
         FlowerPotUtils.addFlowerPotData("HANGING_POTTED_SEAROCKET_WHITE", HANGING_POTTED_SEAROCKET_WHITE);
         FlowerPotUtils.addFlowerPotData("HANGING_POTTED_SEAROCKET_PINK", HANGING_POTTED_SEAROCKET_PINK);
-        FlowerPotUtils.addFlowerPotData("POTTED_CORROCK_CROWN_OVERWORLD", POTTED_CORROCK_CROWN_OVERWORLD);
-        FlowerPotUtils.addFlowerPotData("POTTED_CORROCK_CROWN_NETHER", POTTED_CORROCK_CROWN_NETHER);
-        FlowerPotUtils.addFlowerPotData("POTTED_CORROCK_CROWN_END", POTTED_CORROCK_CROWN_END);
-        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_CORROCK_CROWN_OVERWORLD", HANGING_POTTED_CORROCK_CROWN_OVERWORLD);
-        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_CORROCK_CROWN_NETHER", HANGING_POTTED_CORROCK_CROWN_NETHER);
-        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_CORROCK_CROWN_END", HANGING_POTTED_CORROCK_CROWN_END);
-        FlowerPotUtils.addFlowerPotData("POTTED_POISE_BUSH", POTTED_POISE_BUSH);
-        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_POISE_BUSH", HANGING_POTTED_POISE_BUSH);
-        FlowerPotUtils.addFlowerPotData("POTTED_TALL_POISE_BUSH", POTTED_TALL_POISE_BUSH);
-        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_TALL_POISE_BUSH", HANGING_POTTED_TALL_POISE_BUSH);
-        FlowerPotUtils.addFlowerPotData("POTTED_CAVE_ROOT", POTTED_CAVE_ROOT);
+        FlowerPotUtils.addFlowerPotData("POTTED_CORROCK_CROWN_STANDING_OVERWORLD", POTTED_CORROCK_CROWN_STANDING_OVERWORLD);
+        FlowerPotUtils.addFlowerPotData("POTTED_CORROCK_CROWN_STANDING_NETHER", POTTED_CORROCK_CROWN_STANDING_NETHER);
+        FlowerPotUtils.addFlowerPotData("POTTED_CORROCK_CROWN_STANDING_END", POTTED_CORROCK_CROWN_STANDING_END);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_CORROCK_CROWN_STANDING_OVERWORLD", HANGING_POTTED_CORROCK_CROWN_STANDING_OVERWORLD);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_CORROCK_CROWN_STANDING_NETHER", HANGING_POTTED_CORROCK_CROWN_STANDING_NETHER);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_CORROCK_CROWN_STANDING_END", HANGING_POTTED_CORROCK_CROWN_STANDING_END);
+        FlowerPotUtils.addFlowerPotData("POTTED_POISE_GRASS", POTTED_POISE_GRASS);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_POISE_GRASS", HANGING_POTTED_POISE_GRASS);
+        FlowerPotUtils.addFlowerPotData("POTTED_POISE_GRASS_TALL", POTTED_POISE_GRASS_TALL);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_POISE_GRASS_TALL", HANGING_POTTED_POISE_GRASS_TALL);
+        FlowerPotUtils.addFlowerPotData("POTTED_ROOT_ITEM", POTTED_ROOT_ITEM);
         FlowerPotUtils.addFlowerPotData("POTTED_GLOWSHROOM", POTTED_GLOWSHROOM);
-        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_CAVE_ROOT", HANGING_POTTED_CAVE_ROOT);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_ROOT_ITEM", HANGING_POTTED_ROOT_ITEM);
         FlowerPotUtils.addFlowerPotData("HANGING_POTTED_GLOWSHROOM", HANGING_POTTED_GLOWSHROOM);
-        FlowerPotUtils.addFlowerPotData("POTTED_ORANGE", POTTED_ORANGE);
-        FlowerPotUtils.addFlowerPotData("POTTED_APRICOT", POTTED_APRICOT);
-        FlowerPotUtils.addFlowerPotData("POTTED_APPLE", POTTED_APPLE);
+        FlowerPotUtils.addFlowerPotData("POTTED_ORANGE_FRUIT_TREE", POTTED_ORANGE_FRUIT_TREE);
+        FlowerPotUtils.addFlowerPotData("POTTED_APRICOT_FRUIT_TREE", POTTED_APRICOT_FRUIT_TREE);
+        FlowerPotUtils.addFlowerPotData("POTTED_APPLE_FRUIT_TREE", POTTED_APPLE_FRUIT_TREE);
         FlowerPotUtils.addFlowerPotData("POTTED_DAYROOT", POTTED_DAYROOT);
-        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_ORANGE", HANGING_POTTED_ORANGE);
-        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_APRICOT", HANGING_POTTED_APRICOT);
-        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_APPLE", HANGING_POTTED_APPLE);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_ORANGE_FRUIT_TREE", HANGING_POTTED_ORANGE_FRUIT_TREE);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_APRICOT_FRUIT_TREE", HANGING_POTTED_APRICOT_FRUIT_TREE);
+        FlowerPotUtils.addFlowerPotData("HANGING_POTTED_APPLE_FRUIT_TREE", HANGING_POTTED_APPLE_FRUIT_TREE);
         FlowerPotUtils.addFlowerPotData("HANGING_POTTED_DAYROOT", HANGING_POTTED_DAYROOT);
         FlowerPotUtils.addFlowerPotData("POTTED_BUTTERCUP", POTTED_BUTTERCUP);
         FlowerPotUtils.addFlowerPotData("HANGING_POTTED_BUTTERCUP", HANGING_POTTED_BUTTERCUP);
