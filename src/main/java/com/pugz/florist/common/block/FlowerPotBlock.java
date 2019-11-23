@@ -126,8 +126,6 @@ public class FlowerPotBlock extends Block {
                 world.setBlockState(pos, BlockRegistry.POTTED_JACK_O_LANTERN.getDefaultState().with(Directional.FACING, direction), 3);
                 break;
             default:
-                System.out.println(held.getItem().getRegistryName());
-                System.out.println(name);
                 world.setBlockState(pos, FlowerPotUtils.getBlockByField(name).getDefaultState(), 3);
                 break;
         }

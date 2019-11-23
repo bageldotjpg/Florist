@@ -2,9 +2,9 @@
   "forge_marker": 1,
   "defaults": {
     "textures": {
-      "plant": "earthmobsmod:blocks/buttercup"
+      "plant": "rys:block/orange_fruit_tree_3"
     },
-    "model": "florist:block/flower_pot_hanging_cross"
+    "model": "florist:block/flower_pot_cross"
   },
   "variants": {
     "": [{}]
