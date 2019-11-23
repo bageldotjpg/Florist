@@ -4,7 +4,7 @@
     "textures": {
       "plant": "rys:block/apricot_fruit_tree_3"
     },
-    "model": "florist:block/flower_pot_cross"
+    "model": "block/flower_pot_cross"
   },
   "variants": {
     "": [{}]

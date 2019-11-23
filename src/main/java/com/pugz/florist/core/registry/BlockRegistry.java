@@ -398,7 +398,7 @@ public class BlockRegistry {
     public static Block HANGING_POTTED_APPLE_FRUIT_TREE = new HangingFlowerPotBlock(APPLE_FRUIT_TREE, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_apple_fruit_tree");
     public static Block HANGING_POTTED_DAYROOT = new HangingFlowerPotBlock(DAYROOT, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_dayroot");
 
-    public static Block POTTED_BUTTERCUP = new FlowerPotBlock(BUTTERCUP, BlockProperties.FLOWER_POT).setRegistryName("earthmobsmod:hanging_potted_buttercup");
+    public static Block POTTED_BUTTERCUP = new FlowerPotBlock(BUTTERCUP, BlockProperties.FLOWER_POT).setRegistryName("earthmobsmod:potted_buttercup");
     public static Block HANGING_POTTED_BUTTERCUP = new HangingFlowerPotBlock(BUTTERCUP, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_buttercup");
 
     @SubscribeEvent
