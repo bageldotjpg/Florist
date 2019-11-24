@@ -41,9 +41,9 @@ public class HangingFlowerPotBlock extends FlowerPotBlock {
             if (held.isEmpty()) {
                 player.setHeldItem(hand, new ItemStack(flower));
             }
-            else {
-                if (!player.abilities.isCreativeMode) {
-                    player.inventory.addItemStackToInventory(new ItemStack(flower));
+            else if (!player.abilities.isCreativeMode) {
+                if (!player.inventory.addItemStackToInventory(new ItemStack(flower))) {
+                    player.dropItem(new ItemStack(flower), false);
                 }
             }
             return true;

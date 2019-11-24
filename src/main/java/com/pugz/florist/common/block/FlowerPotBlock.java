@@ -43,7 +43,7 @@ public class FlowerPotBlock extends Block {
     @Override
     public ItemStack getPickBlock(BlockState state, RayTraceResult target, IBlockReader world, BlockPos pos, PlayerEntity player) {
         if (flower == Items.AIR) return new ItemStack(BlockRegistry.FLOWER_POT);
-        else return new ItemStack(flower);
+        return new ItemStack(flower);
     }
 
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
@@ -81,8 +81,7 @@ public class FlowerPotBlock extends Block {
         Direction hitFace = ray.getFace();
         Direction axisDirection = direction.getAxis() == Direction.Axis.Y ? player.getHorizontalFacing().getOpposite() : hitFace;
         tryForPumpkin(world, pos, state, player, held, axisDirection);
-        if (!FlowerPotUtils.isPottable(held.getItem())) return false;
-        else if (flower == Items.AIR) {
+        if (flower == Items.AIR && FlowerPotUtils.isPottable(held.getItem())) {
             fillPot(world, pos, player, held, name);
             player.addStat(Stats.POT_FLOWER);
             if (!player.abilities.isCreativeMode) {
@@ -95,9 +94,9 @@ public class FlowerPotBlock extends Block {
             if (held.isEmpty()) {
                 player.setHeldItem(hand, new ItemStack(flower));
             }
-            else {
-                if (!player.abilities.isCreativeMode) {
-                    player.inventory.addItemStackToInventory(new ItemStack(flower));
+            else if (!player.abilities.isCreativeMode) {
+                if (!player.inventory.addItemStackToInventory(new ItemStack(flower))) {
+                    player.dropItem(new ItemStack(flower), false);
                 }
             }
             return true;
@@ -105,8 +104,8 @@ public class FlowerPotBlock extends Block {
     }
 
     public static void tryForPumpkin(World world, BlockPos pos, BlockState state, PlayerEntity player, ItemStack held, Direction axisDirection) {
-        Direction direction = player.getHorizontalFacing().getOpposite();
         if (held.getItem() == Items.SHEARS && state.getBlock() == BlockRegistry.POTTED_PUMPKIN) {
+            Direction direction = player.getHorizontalFacing().getOpposite();
             world.setBlockState(pos, BlockRegistry.POTTED_CARVED_PUMPKIN.getDefaultState().with(Directional.FACING, direction), 3);
             held.getItem().setDamage(held, held.getDamage() - 1);
             ItemEntity seeds = new ItemEntity(world, (double)pos.getX() + 0.5D + (double)axisDirection.getXOffset() * 0.65D, (double)pos.getY() + 0.1D, (double)pos.getZ() + 0.5D + (double)axisDirection.getZOffset() * 0.65D, new ItemStack(Items.PUMPKIN_SEEDS, 4));
