@@ -28,12 +28,13 @@ import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.annotation.Nullable;
 
 public class FlowerPotBlock extends Block {
     protected static final VoxelShape POT = Block.makeCuboidShape(5.0D, 0.0D, 5.0D, 11.0D, 6.0D, 11.0D);
-    protected final Item flower;
+    protected Item flower;
 
     public FlowerPotBlock(Item flowerIn, Block.Properties properties) {
         super(properties);
@@ -92,11 +93,11 @@ public class FlowerPotBlock extends Block {
         else {
             world.setBlockState(pos, BlockRegistry.FLOWER_POT.getDefaultState(), 3);
             if (held.isEmpty()) {
-                player.setHeldItem(hand, new ItemStack(FlowerPotUtils.getBlockByField(name)));
+                player.setHeldItem(hand, new ItemStack(flower));
             }
             else if (!player.abilities.isCreativeMode) {
-                if (!player.inventory.addItemStackToInventory(new ItemStack(FlowerPotUtils.getBlockByField(name)))) {
-                    player.dropItem(new ItemStack(FlowerPotUtils.getBlockByField(name)), false);
+                if (!player.inventory.addItemStackToInventory(new ItemStack(flower))) {
+                    player.dropItem(new ItemStack(flower), false);
                 }
             }
             return true;

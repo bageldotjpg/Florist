@@ -4,7 +4,6 @@ import com.pugz.florist.core.registry.BlockRegistry;
 import com.pugz.florist.core.util.FlowerPotUtils;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -18,6 +17,13 @@ import net.minecraft.world.World;
 public class HangingFlowerPotBlock extends FlowerPotBlock {
     public HangingFlowerPotBlock(Item flowerIn, Block.Properties properties) {
         super(flowerIn, properties);
+    }
+
+    @Override
+    public void neighborChanged(BlockState state, World world, BlockPos pos, Block neighbor, BlockPos neighborPos, boolean moving) {
+        if (world.getBlockState(pos.up()).isAir(world, pos)) {
+            world.setBlockState(pos, BlockRegistry.FLOWER_POT.getDefaultState(), 3);
+        }
     }
 
     @Override
@@ -37,7 +43,7 @@ public class HangingFlowerPotBlock extends FlowerPotBlock {
             return true;
         }
         else {
-            world.setBlockState(pos, BlockRegistry.HANGING_FLOWER_POT.getDefaultState(), 3);
+            world.setBlockState(pos, BlockRegistry.FLOWER_POT.getDefaultState(), 3);
             if (held.isEmpty()) {
                 player.setHeldItem(hand, new ItemStack(flower));
             }

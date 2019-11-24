@@ -7,7 +7,6 @@ import net.minecraft.world.GrassColors;
 import net.minecraft.world.biome.BiomeColors;
 
 public class ClientProxy extends ServerProxy {
-
     @Override
     public void init() {
         registerBlockColors();

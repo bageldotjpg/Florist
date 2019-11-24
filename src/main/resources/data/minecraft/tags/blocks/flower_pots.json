@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "florist:hanging_flower_pot",
     "florist:potted_wheat",
     "florist:potted_carrot",
     "florist:potted_potato",
