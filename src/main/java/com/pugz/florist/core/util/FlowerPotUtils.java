@@ -28,7 +28,6 @@ public class FlowerPotUtils {
     public static Block getBlockByField(String field) {
         Class blockRegistry = BlockRegistry.class;
         try {
-            System.out.println(field);
             return FLOWER_POT_DATA.get(blockRegistry.getField(field));
         }
         catch (NoSuchFieldException e) {
@@ -53,7 +52,7 @@ public class FlowerPotUtils {
                 "minecraft:cactus",
                 "minecraft:dead_bush",
                 "bambooblocks:bamboo_torch",
-                //"bloomful:white_delphinium", "bloomful:blue_delphinium", "bloomful:pink_delphinium", "bloomful:purple_delphinium",
+                "bloomful:white_delphinium", "bloomful:blue_delphinium", "bloomful:pink_delphinium", "bloomful:purple_delphinium",
                 "bloomful:white_wisteria_sapling", "bloomful:blue_wisteria_sapling", "bloomful:pink_wisteria_sapling", "bloomful:purple_wisteria_sapling",
                 "tropics:red_lotus", "tropics:orange_lotus", "tropics:yellow_lotus", "tropics:cyan_lotus", "tropics:blue_lotus", "tropics:purple_lotus", "tropics:pink_lotus",
                 "upgrade_aquatic:pickerel_weed_blue", "upgrade_aquatic:pickerel_weed_purple",
