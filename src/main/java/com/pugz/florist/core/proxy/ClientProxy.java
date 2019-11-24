@@ -15,6 +15,6 @@ public class ClientProxy extends ServerProxy {
 
     public static void registerBlockColors() {
         BlockColors colors = Minecraft.getInstance().getBlockColors();
-        colors.register((x, world, pos, u) -> world != null && pos != null ? BiomeColors.getGrassColor(world, pos) : GrassColors.get(0.5D, 1.0D), BlockRegistry.POTTED_GRASS, BlockRegistry.POTTED_LARGE_FERN, BlockRegistry.POTTED_TALL_GRASS);
+        colors.register((x, world, pos, u) -> world != null && pos != null ? BiomeColors.getGrassColor(world, pos) : GrassColors.get(0.5D, 1.0D), BlockRegistry.POTTED_GRASS, BlockRegistry.POTTED_LARGE_FERN, BlockRegistry.POTTED_TALL_GRASS, BlockRegistry.HANGING_POTTED_GRASS, BlockRegistry.HANGING_POTTED_LARGE_FERN, BlockRegistry.HANGING_POTTED_TALL_GRASS);
     }
 }
