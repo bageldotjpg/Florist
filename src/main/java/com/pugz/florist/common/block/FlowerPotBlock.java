@@ -43,7 +43,7 @@ public class FlowerPotBlock extends Block {
     @Override
     public ItemStack getPickBlock(BlockState state, RayTraceResult target, IBlockReader world, BlockPos pos, PlayerEntity player) {
         if (flower == Items.AIR) return new ItemStack(BlockRegistry.FLOWER_POT);
-        return new ItemStack(flower);
+        else return new ItemStack(flower);
     }
 
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
@@ -92,11 +92,11 @@ public class FlowerPotBlock extends Block {
         else {
             world.setBlockState(pos, BlockRegistry.FLOWER_POT.getDefaultState(), 3);
             if (held.isEmpty()) {
-                player.setHeldItem(hand, new ItemStack(flower));
+                player.setHeldItem(hand, new ItemStack(FlowerPotUtils.getBlockByField(name)));
             }
             else if (!player.abilities.isCreativeMode) {
-                if (!player.inventory.addItemStackToInventory(new ItemStack(flower))) {
-                    player.dropItem(new ItemStack(flower), false);
+                if (!player.inventory.addItemStackToInventory(new ItemStack(FlowerPotUtils.getBlockByField(name)))) {
+                    player.dropItem(new ItemStack(FlowerPotUtils.getBlockByField(name)), false);
                 }
             }
             return true;

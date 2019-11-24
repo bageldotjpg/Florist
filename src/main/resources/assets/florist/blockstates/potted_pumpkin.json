@@ -3,7 +3,8 @@
   "defaults": {
     "textures": {
       "plant": "florist:block/planted_pumpkin",
-      "all": "florist:block/planted_pumpkin"
+      "all": "florist:block/planted_pumpkin",
+      "dirt": "block/farmland"
     },
     "model": "florist:block/flower_pot_cube_all"
   },

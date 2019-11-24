@@ -3,7 +3,8 @@
   "defaults": {
     "textures": {
       "plant": "florist:block/planted_melon",
-      "all": "florist:block/planted_melon"
+      "all": "florist:block/planted_melon",
+      "dirt": "block/farmland"
     },
     "model": "florist:block/flower_pot_cube_all"
   },

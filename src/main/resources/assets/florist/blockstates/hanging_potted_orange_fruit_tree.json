@@ -2,7 +2,8 @@
   "forge_marker": 1,
   "defaults": {
     "textures": {
-      "plant": "rys:block/orange_fruit_tree_3"
+      "plant": "rys:block/orange_fruit_tree_3",
+      "dirt": "rys:block/planter_box_soil"
     },
     "model": "florist:block/flower_pot_hanging_cross"
   },

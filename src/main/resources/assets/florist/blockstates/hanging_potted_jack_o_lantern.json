@@ -4,7 +4,8 @@
     "textures": {
       "plant": "florist:block/planted_pumpkin",
       "face": "florist:block/planted_jack_o_lantern",
-      "side": "florist:block/planted_pumpkin"
+      "side": "florist:block/planted_pumpkin",
+      "dirt": "block/farmland"
     },
     "model": "florist:block/flower_pot_hanging_cube_face"
   },

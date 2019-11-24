@@ -2,7 +2,8 @@
   "forge_marker": 1,
   "defaults": {
     "textures": {
-      "plant": "quark:block/glowshroom"
+      "plant": "quark:block/glowshroom",
+      "dirt": "quark:block/glowcelium_top"
     },
     "model": "florist:block/flower_pot_hanging_cross"
   },

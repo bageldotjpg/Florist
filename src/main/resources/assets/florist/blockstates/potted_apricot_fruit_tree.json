@@ -2,7 +2,8 @@
   "forge_marker": 1,
   "defaults": {
     "textures": {
-      "plant": "rys:block/apricot_fruit_tree_3"
+      "plant": "rys:block/apricot_fruit_tree_3",
+      "dirt": "rys:block/planter_box_soil"
     },
     "model": "block/flower_pot_cross"
   },

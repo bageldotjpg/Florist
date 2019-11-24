@@ -2,7 +2,8 @@
   "forge_marker": 1,
   "defaults": {
     "textures": {
-      "plant": "florist:block/planted_potatoes"
+      "plant": "florist:block/planted_potatoes",
+      "dirt": "block/farmland"
     },
     "model": "florist:block/flower_pot_hanging_cross"
   },
