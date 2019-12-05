@@ -1,0 +1,12 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "plant": "quark:block/potted/cocoa_bean"
+    },
+    "model": "quark:block/potted_cocoa_bean"
+  },
+  "variants": {
+    "": [{}]
+  }
+}
