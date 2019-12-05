@@ -305,6 +305,11 @@ public class BlockRegistry {
 
     public static Item ROOT = ForgeRegistries.ITEMS.getValue(new ResourceLocation("quark:root"));
     public static Item GLOWSHROOM = ForgeRegistries.ITEMS.getValue(new ResourceLocation("quark:glowshroom"));
+    public static Item LAVENDER_BLOSSOM_SAPLING = ForgeRegistries.ITEMS.getValue(new ResourceLocation("quark:lavender_blossom_sapling"));
+    public static Item ORANGE_BLOSSOM_SAPLING = ForgeRegistries.ITEMS.getValue(new ResourceLocation("quark:orange_blossom_sapling"));
+    public static Item PINK_BLOSSOM_SAPLING = ForgeRegistries.ITEMS.getValue(new ResourceLocation("quark:pink_blossom_sapling"));
+    public static Item BLUE_BLOSSOM_SAPLING = ForgeRegistries.ITEMS.getValue(new ResourceLocation("quark:blue_blossom_sapling"));
+    public static Item YELLOW_BLOSSOM_SAPLING = ForgeRegistries.ITEMS.getValue(new ResourceLocation("quark:yellow_blossom_sapling"));
 
     public static Item ORANGE_FRUIT_TREE = ForgeRegistries.ITEMS.getValue(new ResourceLocation("rys:orange_fruit_tree"));
     public static Item APRICOT_FRUIT_TREE = ForgeRegistries.ITEMS.getValue(new ResourceLocation("rys:apricot_fruit_tree"));
@@ -388,6 +393,13 @@ public class BlockRegistry {
     public static Block POTTED_GLOWSHROOM = new FlowerPotBlock(GLOWSHROOM, BlockProperties.POTTED_TORCH).setRegistryName("quark:potted_glowshroom");
     public static Block HANGING_POTTED_ROOT = new HangingFlowerPotBlock(ROOT, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_root");
     public static Block HANGING_POTTED_GLOWSHROOM = new HangingFlowerPotBlock(GLOWSHROOM, BlockProperties.POTTED_TORCH).setRegistryName("hanging_potted_glowshroom");
+    public static Block HANGING_POTTED_LAVENDER_BLOSSOM_SAPLING = new HangingFlowerPotBlock(LAVENDER_BLOSSOM_SAPLING, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_lavender_blossom_sapling");
+    public static Block HANGING_POTTED_ORANGE_BLOSSOM_SAPLING = new HangingFlowerPotBlock(ORANGE_BLOSSOM_SAPLING, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_orange_blossom_sapling");
+    public static Block HANGING_POTTED_PINK_BLOSSOM_SAPLING = new HangingFlowerPotBlock(PINK_BLOSSOM_SAPLING, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_pink_blossom_sapling");
+    public static Block HANGING_POTTED_BLUE_BLOSSOM_SAPLING = new HangingFlowerPotBlock(BLUE_BLOSSOM_SAPLING, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_blue_blossom_sapling");
+    public static Block HANGING_POTTED_YELLOW_BLOSSOM_SAPLING = new HangingFlowerPotBlock(YELLOW_BLOSSOM_SAPLING, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_yellow_blossom_sapling");
+    public static Block HANGING_POTTED_COCOA_BEAN = new HangingFlowerPotBlock(Items.COCOA_BEANS, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_cocoa_bean");
+    public static Block HANGING_POTTED_SEA_PICKLE = new HangingFlowerPotBlock(Items.SEA_PICKLE, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_sea_pickle");
 
     public static Block POTTED_ORANGE_FRUIT_TREE = new FlowerPotBlock(ORANGE_FRUIT_TREE, BlockProperties.FLOWER_POT).setRegistryName("potted_orange_fruit_tree");
     public static Block POTTED_APRICOT_FRUIT_TREE = new FlowerPotBlock(APRICOT_FRUIT_TREE, BlockProperties.FLOWER_POT).setRegistryName("potted_apricot_fruit_tree");
@@ -442,7 +454,9 @@ public class BlockRegistry {
         if (ModList.get().isLoaded("quark")) {
             event.getRegistry().registerAll(
                     //HANGING_POTTED_ROOT, POTTED_ROOT,
-                    HANGING_POTTED_GLOWSHROOM, POTTED_GLOWSHROOM
+                    HANGING_POTTED_GLOWSHROOM, POTTED_GLOWSHROOM,
+                    HANGING_POTTED_COCOA_BEAN, HANGING_POTTED_SEA_PICKLE,
+                    HANGING_POTTED_LAVENDER_BLOSSOM_SAPLING, HANGING_POTTED_ORANGE_BLOSSOM_SAPLING, HANGING_POTTED_PINK_BLOSSOM_SAPLING, HANGING_POTTED_BLUE_BLOSSOM_SAPLING, HANGING_POTTED_YELLOW_BLOSSOM_SAPLING
             );
         }
         if (ModList.get().isLoaded("rys")) {

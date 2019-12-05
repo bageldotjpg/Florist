@@ -4,7 +4,6 @@ import com.pugz.florist.core.registry.BlockRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.ModList;
-import org.apache.commons.lang3.StringUtils;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;
@@ -63,6 +62,7 @@ public class FlowerPotUtils {
                 "endergetic:poise_grass", "endergetic:poise_grass_tall",
                 //"quark:root_item",
                 "quark:glowshroom",
+                "quark:lavender_blossom_sapling", "quark:orange_blossom_sapling", "quark:pink_blossom_sapling", "quark:blue_blossom_sapling", "quark:yellow_blossom_sapling",
                 "rys:orange_fruit_tree", "rys:apricot_fruit_tree", "rys:apple_fruit_tree",
                 //"rys:dayroot",
                 "earthmobsmod:buttercup"
@@ -161,6 +161,11 @@ public class FlowerPotUtils {
             addFlowerPotData("POTTED_GLOWSHROOM", POTTED_GLOWSHROOM);
             //addFlowerPotData("HANGING_POTTED_ROOT", HANGING_POTTED_ROOT);
             addFlowerPotData("HANGING_POTTED_GLOWSHROOM", HANGING_POTTED_GLOWSHROOM);
+            addFlowerPotData("HANGING_POTTED_LAVENDER_BLOSSOM_SAPLING", HANGING_POTTED_LAVENDER_BLOSSOM_SAPLING);
+            addFlowerPotData("HANGING_POTTED_ORANGE_BLOSSOM_SAPLING", HANGING_POTTED_ORANGE_BLOSSOM_SAPLING);
+            addFlowerPotData("HANGING_POTTED_PINK_BLOSSOM_SAPLING", HANGING_POTTED_PINK_BLOSSOM_SAPLING);
+            addFlowerPotData("HANGING_POTTED_BLUE_BLOSSOM_SAPLING", HANGING_POTTED_BLUE_BLOSSOM_SAPLING);
+            addFlowerPotData("HANGING_POTTED_YELLOW_BLOSSOM_SAPLING", HANGING_POTTED_YELLOW_BLOSSOM_SAPLING);
         }
         if (ModList.get().isLoaded("rys")) {
             addFlowerPotData("POTTED_ORANGE_FRUIT_TREE", POTTED_ORANGE_FRUIT_TREE);
@@ -264,6 +269,8 @@ public class FlowerPotUtils {
         addFlowerPotData("HANGING_POTTED_LARGE_FERN", HANGING_POTTED_LARGE_FERN);
         addFlowerPotData("HANGING_POTTED_CARVED_PUMPKIN", HANGING_POTTED_CARVED_PUMPKIN);
         addFlowerPotData("HANGING_POTTED_JACK_O_LANTERN", HANGING_POTTED_JACK_O_LANTERN);
+        addFlowerPotData("HANGING_POTTED_COCOA_BEAN", HANGING_POTTED_JACK_O_LANTERN);
+        addFlowerPotData("HANGING_POTTED_SEA_PICKLE", HANGING_POTTED_JACK_O_LANTERN);
         //addFlowerPotData("POTTED_FIRE_CORAL", POTTED_FIRE_CORAL);
         //addFlowerPotData("POTTED_DEAD_FIRE_CORAL", POTTED_DEAD_FIRE_CORAL);
         //addFlowerPotData("POTTED_FIRE_CORAL_FAN", POTTED_FIRE_CORAL_FAN);

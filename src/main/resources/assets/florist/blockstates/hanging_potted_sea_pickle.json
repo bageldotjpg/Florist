@@ -1,0 +1,12 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "plant": "quark:block/potted/sea_pickle"
+    },
+    "model": "florist:block/potted_sea_pickle_hanging"
+  },
+  "variants": {
+    "": [{}]
+  }
+}

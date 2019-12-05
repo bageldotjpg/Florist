@@ -2,6 +2,7 @@ modLoader="javafml"
 loaderVersion="[28,]"
 logoFile="logo.png"
 authors="Pugz"
+credits="*Endergized*"
 
 [[mods]]
     modId="florist"
