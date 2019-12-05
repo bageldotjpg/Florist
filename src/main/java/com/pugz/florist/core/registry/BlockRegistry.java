@@ -391,6 +391,13 @@ public class BlockRegistry {
 
     public static Block POTTED_ROOT = new FlowerPotBlock(ROOT, BlockProperties.FLOWER_POT).setRegistryName("potted_root");
     public static Block POTTED_GLOWSHROOM = new FlowerPotBlock(GLOWSHROOM, BlockProperties.POTTED_TORCH).setRegistryName("quark:potted_glowshroom");
+    public static Block POTTED_LAVENDER_BLOSSOM_SAPLING = new FlowerPotBlock(LAVENDER_BLOSSOM_SAPLING, BlockProperties.FLOWER_POT).setRegistryName("quark:potted_lavender_blossom_sapling");
+    public static Block POTTED_ORANGE_BLOSSOM_SAPLING = new FlowerPotBlock(ORANGE_BLOSSOM_SAPLING, BlockProperties.FLOWER_POT).setRegistryName("quark:potted_orange_blossom_sapling");
+    public static Block POTTED_PINK_BLOSSOM_SAPLING = new FlowerPotBlock(PINK_BLOSSOM_SAPLING, BlockProperties.FLOWER_POT).setRegistryName("quark:potted_pink_blossom_sapling");
+    public static Block POTTED_BLUE_BLOSSOM_SAPLING = new FlowerPotBlock(BLUE_BLOSSOM_SAPLING, BlockProperties.FLOWER_POT).setRegistryName("quark:potted_blue_blossom_sapling");
+    public static Block POTTED_YELLOW_BLOSSOM_SAPLING = new FlowerPotBlock(YELLOW_BLOSSOM_SAPLING, BlockProperties.FLOWER_POT).setRegistryName("quark:potted_yellow_blossom_sapling");
+    public static Block POTTED_COCOA_BEAN = new FlowerPotBlock(Items.COCOA_BEANS, BlockProperties.FLOWER_POT).setRegistryName("quark:potted_cocoa_bean");
+    public static Block POTTED_SEA_PICKLE = new FlowerPotBlock(Items.SEA_PICKLE, BlockProperties.FLOWER_POT).setRegistryName("quark:potted_sea_pickle");
     public static Block HANGING_POTTED_ROOT = new HangingFlowerPotBlock(ROOT, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_root");
     public static Block HANGING_POTTED_GLOWSHROOM = new HangingFlowerPotBlock(GLOWSHROOM, BlockProperties.POTTED_TORCH).setRegistryName("hanging_potted_glowshroom");
     public static Block HANGING_POTTED_LAVENDER_BLOSSOM_SAPLING = new HangingFlowerPotBlock(LAVENDER_BLOSSOM_SAPLING, BlockProperties.FLOWER_POT).setRegistryName("hanging_potted_lavender_blossom_sapling");
@@ -455,6 +462,8 @@ public class BlockRegistry {
             event.getRegistry().registerAll(
                     //HANGING_POTTED_ROOT, POTTED_ROOT,
                     HANGING_POTTED_GLOWSHROOM, POTTED_GLOWSHROOM,
+                    POTTED_COCOA_BEAN, POTTED_SEA_PICKLE,
+                    POTTED_LAVENDER_BLOSSOM_SAPLING, POTTED_ORANGE_BLOSSOM_SAPLING, POTTED_PINK_BLOSSOM_SAPLING, POTTED_BLUE_BLOSSOM_SAPLING, POTTED_YELLOW_BLOSSOM_SAPLING,
                     HANGING_POTTED_COCOA_BEAN, HANGING_POTTED_SEA_PICKLE,
                     HANGING_POTTED_LAVENDER_BLOSSOM_SAPLING, HANGING_POTTED_ORANGE_BLOSSOM_SAPLING, HANGING_POTTED_PINK_BLOSSOM_SAPLING, HANGING_POTTED_BLUE_BLOSSOM_SAPLING, HANGING_POTTED_YELLOW_BLOSSOM_SAPLING
             );

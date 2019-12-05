@@ -50,6 +50,7 @@ public class FlowerPotUtils {
                 "minecraft:red_mushroom", "minecraft:brown_mushroom",
                 "minecraft:cactus",
                 "minecraft:dead_bush",
+                "minecraft:sea_pickle", "minecraft:cocoa_beans",
                 "bambooblocks:bamboo_torch",
                 "bloomful:white_delphinium", "bloomful:blue_delphinium", "bloomful:pink_delphinium", "bloomful:purple_delphinium",
                 "bloomful:white_wisteria_sapling", "bloomful:blue_wisteria_sapling", "bloomful:pink_wisteria_sapling", "bloomful:purple_wisteria_sapling",
@@ -159,8 +160,17 @@ public class FlowerPotUtils {
         if (ModList.get().isLoaded("quark")) {
             //addFlowerPotData("POTTED_ROOT", POTTED_ROOT);
             addFlowerPotData("POTTED_GLOWSHROOM", POTTED_GLOWSHROOM);
+            addFlowerPotData("POTTED_COCOA_BEAN", POTTED_COCOA_BEAN);
+            addFlowerPotData("POTTED_SEA_PICKLE", POTTED_SEA_PICKLE);
+            addFlowerPotData("POTTED_LAVENDER_BLOSSOM_SAPLING", POTTED_LAVENDER_BLOSSOM_SAPLING);
+            addFlowerPotData("POTTED_ORANGE_BLOSSOM_SAPLING", POTTED_ORANGE_BLOSSOM_SAPLING);
+            addFlowerPotData("POTTED_PINK_BLOSSOM_SAPLING", POTTED_PINK_BLOSSOM_SAPLING);
+            addFlowerPotData("POTTED_BLUE_BLOSSOM_SAPLING", POTTED_BLUE_BLOSSOM_SAPLING);
+            addFlowerPotData("POTTED_YELLOW_BLOSSOM_SAPLING", POTTED_YELLOW_BLOSSOM_SAPLING);
             //addFlowerPotData("HANGING_POTTED_ROOT", HANGING_POTTED_ROOT);
             addFlowerPotData("HANGING_POTTED_GLOWSHROOM", HANGING_POTTED_GLOWSHROOM);
+            addFlowerPotData("HANGING_POTTED_COCOA_BEAN", HANGING_POTTED_COCOA_BEAN);
+            addFlowerPotData("HANGING_POTTED_SEA_PICKLE", HANGING_POTTED_SEA_PICKLE);
             addFlowerPotData("HANGING_POTTED_LAVENDER_BLOSSOM_SAPLING", HANGING_POTTED_LAVENDER_BLOSSOM_SAPLING);
             addFlowerPotData("HANGING_POTTED_ORANGE_BLOSSOM_SAPLING", HANGING_POTTED_ORANGE_BLOSSOM_SAPLING);
             addFlowerPotData("HANGING_POTTED_PINK_BLOSSOM_SAPLING", HANGING_POTTED_PINK_BLOSSOM_SAPLING);
@@ -269,8 +279,6 @@ public class FlowerPotUtils {
         addFlowerPotData("HANGING_POTTED_LARGE_FERN", HANGING_POTTED_LARGE_FERN);
         addFlowerPotData("HANGING_POTTED_CARVED_PUMPKIN", HANGING_POTTED_CARVED_PUMPKIN);
         addFlowerPotData("HANGING_POTTED_JACK_O_LANTERN", HANGING_POTTED_JACK_O_LANTERN);
-        addFlowerPotData("HANGING_POTTED_COCOA_BEAN", HANGING_POTTED_JACK_O_LANTERN);
-        addFlowerPotData("HANGING_POTTED_SEA_PICKLE", HANGING_POTTED_JACK_O_LANTERN);
         //addFlowerPotData("POTTED_FIRE_CORAL", POTTED_FIRE_CORAL);
         //addFlowerPotData("POTTED_DEAD_FIRE_CORAL", POTTED_DEAD_FIRE_CORAL);
         //addFlowerPotData("POTTED_FIRE_CORAL_FAN", POTTED_FIRE_CORAL_FAN);
